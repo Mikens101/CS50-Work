@@ -1,0 +1,42 @@
+
+
+Coleman-Liau index
+
+    int l = total char (not null) / 100 words
+    int s = total char (separated by null) / 100 words
+
+    l/w*100
+    s/w*100
+
+    index = 0.0588 * L - 0.296 * S - 15.8
+
+Structure
+    1. get_string
+    2. count char
+    3. count words (32)
+    4. count sentences (. ! ?)
+    5. run equation + return
+    6. printf("Grade %i\n", X);
+
+
+
+            printf("Grade 1\n");
+    } else if (INDEX == 2)
+    {
+        printf("Grade 2\n");
+    } else if (INDEX == 3)
+    {
+        printf("Grade 3\n");
+    } else if (INDEX == 4)
+    {
+        printf("Grade 4\n");
+    } else if (INDEX == 5)
+    {
+        printf("Grade 5\n");
+    } else if (INDEX == 6)
+    {
+        printf("Grade 6\n");
+    } else if (INDEX == 7)
+    {
+        printf("Grade 7\n");
+    } else if (INDEX == 8)

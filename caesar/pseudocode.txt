@@ -1,0 +1,25 @@
+
+
+Caesar's Algorithm
+    c = (p + k) % 26
+
+int CAP[] = {65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90};
+int LOW[] = {97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122};
+
+Steps
+    1. Don't accpet key if...
+            non int, negative, no input, multiple inputs...
+
+            printf("Usage: ./caesar key");
+            return 1;
+
+    2. Create a functio to 'wrap' ASCII #'s
+    3. For every char, shift by key if NOT..
+            CAPS / low
+            space
+            punctuation
+
+    4. get_string("plaintext: ");
+    5. printf("ciphertext: %s\n", ctext);
+            return 0;
+

@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Homepage
+{% endblock %}
+
+{% block main %}
+    <div style="padding-left:15%; padding-right:15%">
+        <div>
+            {{ username }}'s Investment Dashboard
+        </div>
+
+        <hr>
+
+        <table class="table table-sm table-striped">
+            <thead>
+                <tr>
+                    <th style="width:15%">SYMBOL</th>
+                    <th style="width:15%; text-align:left">Company</th>
+                    <th style="width:15%">Shares</th>
+                    <th style="width:15%">Price</th>
+                    <th style="width:15%">Total Investment</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for stock in stocks %}
+                <tr>
+                    <td>{{ stock['symbol'].upper() }}</td>
+                    <td style="text-align:left">{{ stock['name'] }}</td>
+                    <td>{{ stock['numShares'] }}</td>
+                    <td>{{ usd(stock['sharePrice']) }}</td>
+                    <td>{{ usd(stock['numShares'] * stock['sharePrice']) }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <td colspan="4" style="text-align:right"><b>Cash: </b></td>
+                    <td>{{ usd(cash) }}</td>
+                </tr>
+                <tr>
+                    <td colspan="4" style="text-align:right"><b>Total: </b></td>
+                    <td>{{ usd(bankTotal) }}</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+{% endblock %}

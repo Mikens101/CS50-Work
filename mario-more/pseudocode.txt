@@ -1,0 +1,38 @@
+
+
+
+1. Define var data type retrieving (int)
+2. Ask get_int height, until > 1 && < 8
+3. Build block of height(i) x height(j)
+    (i) && (j) < height --> since start = 0
+4. Form pyramid...
+
+    subtract j - i to form a table of diagonal points
+
+        0  1  2  3  4  5  6  7
+        - - - - - - - - - - -
+    0 | 0  1  2  3  4  5  6  7
+    1 |-1  0  1  2  3  4  5  6
+    2 |-2 -1  0  1  2  3  4  5
+    3 |-3 -2 -1  0  1  2  3  4
+    4 |-4 -3 -2 -1  0  1  2  3
+    5 |-5 -4 -3 -2 -1  0  1  2
+    6 |-6 -5 -4 -3 -2 -1  0  1
+    7 |-7 -6 -5 -4 -3 -2 -1  0
+
+    * 0 is the correct diagonal
+        if input 8, 7,..., 1, then 0 is a constant input
+    * if (j - i) > (0), then print " "
+            * if < (0), then print "#"
+
+        0  1  2  3  4  5  6  7  [] [] 0  1  2  3  4  5  6  7
+        - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    0 |                      7        0
+    1 |                   7  8        -1 0
+    2 |                7  8  9        -2 -1 0
+    3 |             7  8  9  10       -3 -2 -1 0
+    4 |          7  8  9  10 11       -4 -3 -2 -1 0
+    5 |       7  8  9  10 11 12       -5 -4 -3 -2 -1 0
+    6 |    7  8  9  10 11 12 13       -6 -5 -4 -3 -2 -1 0
+    7 | 7  8  9  10 11 12 13 14       -7 -6 -5 -4 -3 -2 -1 0
+                {i + j}                     {j - i}
